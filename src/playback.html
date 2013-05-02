@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <link href="components/normalize-css/normalize.css" 
+          rel="stylesheet" 
+          media="screen">
+
+    <link href="css/playback.css" 
+          rel="stylesheet" 
+          media="screen">
+
+  </head>
+  <body>
+    <h1>Playback</h1>
+
+    <div id="playback">
+    </div>
+
+
+
+
+    <script id="playback-template" type="text/x-template">
+      <div>
+        <p></p>
+      </div>
+    </script>
+
+
+    <script src="components/jquery/jquery.js">
+    </script>
+    <script src="components/lodash/lodash.js">
+    </script>
+    <script src="components/backbone/backbone.js">
+    </script>
+    <script src="src/playback.js">
+    </script>
+
+    <script type="text/javascript">
+      var timeIntervals = {
+         start: 1985,
+         end: 2012,
+         step: '1 year'
+      }
+
+      $(function () {
+         var playback = new Hudson.Playback({
+         }).render();
+      });
+
+    </script>
+
+  </body>
+</html>
