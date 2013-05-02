@@ -5,6 +5,7 @@
   "devDependencies": {
     "bower": "0.9.0",
     "grunt": "0.4.1",
+    "jsdoc": "3.2.0-dev",
     "grunt-contrib-sass": "0.3.0",
     "grunt-contrib-clean": "0.4.0",
     "grunt-contrib-qunit": "0.2.1",

@@ -19,7 +19,6 @@ module.exports = function (grunt) {
             server: {
                 options: {
                     port: 3000,
-                    keepalive: true,
                     base: '.'
                 }
             }
@@ -32,9 +31,6 @@ module.exports = function (grunt) {
             sass: {
                 files: ['src/theme/main.scss'],
                 tasks: ['sass'],
-                options: {
-                    nospawn: false
-                }
             }
         }
     });
@@ -47,6 +43,6 @@ module.exports = function (grunt) {
 
 
     grunt.registerTask('build', ['uglify']);
-    grunt.registerTask('start', ['watch', 'connect']);
+    grunt.registerTask('start', ['connect', 'watch']);
 
 };
