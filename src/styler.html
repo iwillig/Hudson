@@ -2,32 +2,90 @@
 <html>
   <head>
     <title></title>
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1">
 
-    <link href="components/normalize-css/normalize.css" 
-          rel="stylesheet" 
-          media="screen">
+
+    <link rel="stylesheet"
+          media="screen"
+          href="../components/jquery-mobile/dist/jquery.mobile.min.css">
+    
+
+    <script id="styler-template" type="text/x-template">
+      <div class="hudson-widget-title">
+        <p>Edit style</p>
+      </div>
+
+      <div class="hudson-widget-content">
+        <div class="style-title">
+          <a href="#"><%= style.title %></a>
+        </div>
+        <div>
+          <a href="#">
+        <ul class="styler-rules">
+        </ul>
+      </div>
+    </script>
+
+    <script id="styler-edit" type="text/x-template">
+      <form class="style-form">
+        <input name="title" type="text" value="<%= style.title %>">
+        <input type="submit" value="Save">
+      </form>
+    </script>
+
+    <script id="styler-rule-template" type="text/x-template">
+      <li class="styler-rule">
+        <p><%= title =></p>
+      </li>
+    </script>
 
   </head>
+
   <body>
-    <h1>Style editor demo</h1>
+
+    <div data-role="page">
 
 
-    <script src="components/jquery/jquery.js">
+      <div data-role="content">
+	<p>Page content goes here.</p>
+
+        <div data-role="panel" id="sidepanel">
+          <p>This is a panel</p>
+        </div>
+      </div>
+
+      <div data-role="footer" class="ui-bar">
+        <a class="showSidebar" href="#" data-icon="plus">Add</a>
+      </div>
+
+    </div>
+
+    <script src="../components/jquery/jquery.js">
     </script>
-    <script src="components/lodash/lodash.js">
-    </script>
-    <script src="components/backbone/backbone.js">
+    <script src="../components/jquery-mobile/dist/jquery.mobile.min.js">
     </script>
 
-    <script src="src/styler.js">
+    <script src="../components/lodash/lodash.js">
+    </script>
+    <script src="../components/backbone/backbone.js">
+    </script>
+
+
+
+
+    <script src="scripts/common.js">
+    </script>
+    <script src="scripts/styler.js">
     </script>
 
     <script type="text/javascript">
-
       $(function () {
-         var styler = new Hudson.Styler({}).render();
-      });
 
+          Hudson.styler.main({
+          });
+
+      });
     </script>
 
   </body>

@@ -11,7 +11,7 @@ module.exports = function (grunt) {
         sass: {
             dev: {
                 files: {
-                    'src/theme/main.css': 'src/theme/main.scss'
+                    'src/theme/main.css': 'src/theme/main.sass'
                 }
             }
         },
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
         },
         watch: {
             sass: {
-                files: ['src/theme/main.scss'],
+                files: ['src/theme/main.sass'],
                 tasks: ['sass'],
             }
         }

@@ -2,7 +2,7 @@
 /*global _*/
 
 /** Common functions for the Hudson project
- * @namespace Hudson
+ * @module Hudson
  */
 var Hudson = Hudson || {};
 
